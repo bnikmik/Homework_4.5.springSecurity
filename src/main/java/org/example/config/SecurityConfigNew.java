@@ -13,9 +13,9 @@ public class SecurityConfigNew extends WebSecurityConfigurerAdapter {
 
         User.UserBuilder userBuilder = User.withDefaultPasswordEncoder();
         auth.inMemoryAuthentication()
-                .withUser(userBuilder.username("Ivan").password("qwerty").roles("USER"))
-                .withUser(userBuilder.username("Petr").password("asdfgh").roles("TESTER"))
-                .withUser(userBuilder.username("Olga").password("zxcvbn").roles("TESTER", "ADMIN"));
-
+                .withUser(userBuilder.username("Ivan").password("qwerty").roles("Employee"))
+                .withUser(userBuilder.username("Petr").password("asdfgh").roles("IT"))
+                .withUser(userBuilder.username("Olga").password("zxcvbn").roles("Security"))
+                .withUser(userBuilder.username("Ekaterina").password("123456").roles("Director"));
     }
 }
